@@ -1,17 +1,15 @@
 
 "use strict";
 
-/** variables */
-const facebook = document.querySelectorAll(".ez-facebook");
-const linkedin = document.querySelectorAll(".ez-linkedin");
-const pinterest = document.querySelectorAll(".ez-pinterest");
-const pocket = document.querySelectorAll(".ez-pocket");
-const reddit = document.querySelectorAll(".ez-reddit");
-const telegram = document.querySelectorAll(".ez-telegram");
-const x = document.querySelectorAll(".ez-x");
-
-
 var ezShare = (function (ez) {
+  /** variables */
+  const facebook = document.querySelectorAll(".ez-facebook");
+  const linkedin = document.querySelectorAll(".ez-linkedin");
+  const pinterest = document.querySelectorAll(".ez-pinterest");
+  const pocket = document.querySelectorAll(".ez-pocket");
+  const reddit = document.querySelectorAll(".ez-reddit");
+  const telegram = document.querySelectorAll(".ez-telegram");
+  const x = document.querySelectorAll(".ez-x");
 
   var options = {
     facebook: function (params) {
@@ -41,13 +39,7 @@ var ezShare = (function (ez) {
     },
   }
 
-
   ez.execute = function () {
-    /**
-     * available prams
-     * url
-     * hashtags
-     */
     facebook.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -59,10 +51,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     */
     linkedin.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -73,12 +61,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     * description
-     * media
-     */
     pinterest.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -91,10 +73,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     */
     pocket.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -105,11 +83,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     * title
-     */
     reddit.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -121,11 +94,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     * title
-     */
     reddit.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -137,11 +105,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     * text
-     */
     telegram.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -153,13 +116,6 @@ var ezShare = (function (ez) {
       });
     });
 
-    /**
-     * available params
-     * url
-     * title
-     * via
-     * hashtags 
-     */
     x.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
@@ -177,4 +133,3 @@ var ezShare = (function (ez) {
   return ez;
 
 })({});
-
