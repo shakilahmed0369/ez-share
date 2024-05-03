@@ -1,3 +1,4 @@
+```
 # 🚀 ezShare - JavaScript Social Share Plugin
 
 ezShare is a lightweight JavaScript plugin for easy sharing of content on various social media platforms.
@@ -26,15 +27,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ## Available Platforms and Parameters
 
-| Platform  | Class      | Parameters   | Description                                                                                     |
-|-----------|------------|--------------|-------------------------------------------------------------------------------------------------|
+| Platform  | Class        | Parameters   | Description                                                                                     |
+|-----------|--------------|--------------|-------------------------------------------------------------------------------------------------|
 | Facebook  | `ez-facebook` | `data-url`, `data-hashtags` | Share URL to Facebook. Optionally add hashtags. If no `data-url`, current URL will be used.  |
 | LinkedIn  | `ez-linkedin` | `data-url`   | Share URL to LinkedIn. If no `data-url`, current URL will be used.                             |
 | Pinterest | `ez-pinterest` | `data-url`, `data-description`, `data-media` | Share URL to Pinterest. Optionally add description and media. If no `data-url`, current URL will be used. |
-| Pocket    | `ez-pocket` | `data-url`   | Save URL to Pocket for later reading. If no `data-url`, current URL will be used.               |
-| Reddit    | `ez-reddit` | `data-url`, `data-title` | Share URL to Reddit. Optionally add title. If no `data-url`, current URL will be used.          |
+| Pocket    | `ez-pocket`   | `data-url`   | Save URL to Pocket for later reading. If no `data-url`, current URL will be used.               |
+| Reddit    | `ez-reddit`   | `data-url`, `data-title` | Share URL to Reddit. Optionally add title. If no `data-url`, current URL will be used.          |
 | Telegram  | `ez-telegram` | `data-url`, `data-text` | Share URL to Telegram. Optionally add custom message. If no `data-url`, current URL will be used.|
-| X         | `ez-x`     | `data-url`, `data-text`, `data-via`, `data-hashtags` | Share URL to Twitter. Customize tweet text, source, and hashtags. If no `data-url`, current URL will be used. |
+| X         | `ez-x`        | `data-url`, `data-text`, `data-via`, `data-hashtags` | Share URL to Twitter. Customize tweet text, source, and hashtags. If no `data-url`, current URL will be used. |
 
 ## Example
 
@@ -50,3 +51,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 - ezShare does not provide any predefined styles for the share buttons. Users have the freedom to style them according to their design preferences.
 - Ensure each button element has the appropriate class (`ez-PLATFORM`) and data attributes (`data-url`, `data-description`, etc.) for the desired platform and parameters.
+```
