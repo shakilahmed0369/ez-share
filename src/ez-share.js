@@ -18,29 +18,26 @@ var ezShare = (function (ez) {
       return `https://www.facebook.com/sharer/sharer.php?u=${params.url}${params.hashtags ? `&hashtag=%23${params.hashtags}` : ""
         }`;
     },
-    linkedin: function(params) {
+    linkedin: function (params) {
       return `https://www.linkedin.com/sharing/share-offsite/?url=${params.url}`;
     },
-    pinterest: function(params) {
-      return `https://pinterest.com/pin/create/button/?url=${params.url}&description=${
-        params.description
-      }${params.media ? `&media=${params.media}` : ""}`;
+    pinterest: function (params) {
+      return `https://pinterest.com/pin/create/button/?url=${params.url}&description=${params.description
+        }${params.media ? `&media=${params.media}` : ""}`;
     },
-    pocket: function(params) {
+    pocket: function (params) {
       return `https://getpocket.com/edit.php?url=${params.url}`;
     },
-    reddit: function(params) {
+    reddit: function (params) {
       return `https://www.reddit.com/submit?title=${params.title ?? ""}&url=${params.url}`;
     },
-    telegram: function(params) {
-      return `https://telegram.me/share/url?url=${params.url}${
-        params.text ? `&text=${params.text}` : ""
-      }`;
+    telegram: function (params) {
+      return `https://telegram.me/share/url?url=${params.url}${params.text ? `&text=${params.text}` : ""
+        }`;
     },
-    x: function(params) {
-      return `https://twitter.com/intent/tweet?url=${params.url}&text=${
-        params.text
-      }${params.via ? `&via=${params.via}` : ""}${params.hashtags ? `&hashtags=${params.hashtags}` : ""}`;
+    x: function (params) {
+      return `https://twitter.com/intent/tweet?url=${params.url}&text=${params.text
+        }${params.via ? `&via=${params.via}` : ""}${params.hashtags ? `&hashtags=${params.hashtags}` : ""}`;
     },
   }
 
@@ -61,7 +58,7 @@ var ezShare = (function (ez) {
         window.open(shareUrl, "_blank", "width  =640,height=440");
       });
     });
-    
+
     /**
      * available params
      * url
@@ -139,7 +136,7 @@ var ezShare = (function (ez) {
         window.open(shareUrl, "_blank", "width  =640,height=440");
       });
     });
-    
+
     /**
      * available params
      * url
@@ -150,7 +147,7 @@ var ezShare = (function (ez) {
         e.preventDefault();
         const url = item.getAttribute("data-url") || location.href;
         const text = item.getAttribute("data-text");
-        const params = { url: url, text: text};
+        const params = { url: url, text: text };
         const shareUrl = options.telegram(params);
         window.open(shareUrl, "_blank", "width=640,height=440");
       });
@@ -175,7 +172,6 @@ var ezShare = (function (ez) {
         window.open(shareUrl, "_blank", "width=640,height=440");
       });
     });
-
   }
 
   return ez;
