@@ -5,6 +5,7 @@
 const facebook = document.querySelectorAll(".ez-facebook");
 const linkedin = document.querySelectorAll(".ez-linkedin");
 const pinterest = document.querySelectorAll(".ez-pinterest");
+const pocket = document.querySelectorAll(".ez-pocket");
 
 
 var ezShare = (function (x) {
@@ -21,6 +22,9 @@ var ezShare = (function (x) {
       return `https://pinterest.com/pin/create/button/?url=${params.url}&description=${
         params.description
       }${params.media ? `&media=${params.media}` : ""}`;
+    },
+    pocket: function(params) {
+      return `https://getpocket.com/edit.php?url=${params.url}`;
     },
   }
 
@@ -74,6 +78,19 @@ var ezShare = (function (x) {
       });
     });
 
+    /**
+     * available params
+     * url
+     */
+    pinterest.forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = item.getAttribute("data-url") || location.href;
+        const params = { url: url };
+        const shareUrl = options.pocket(params);
+        window.open(shareUrl, "_blank", "width  =640,height=440");
+      });
+    });
   }
 
   return x;
