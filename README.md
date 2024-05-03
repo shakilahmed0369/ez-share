@@ -1,4 +1,3 @@
-```
 # 🚀 ezShare - JavaScript Social Share Plugin
 
 ezShare is a lightweight JavaScript plugin that enables easy sharing of content on various social media platforms.
@@ -7,7 +6,7 @@ ezShare is a lightweight JavaScript plugin that enables easy sharing of content 
 
 To use ezShare, simply include the JavaScript file in your project:
 
-```html
+```javascript
 <script src="ezShare.js"></script>
 ```
 
