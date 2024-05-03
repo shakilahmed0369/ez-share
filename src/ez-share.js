@@ -1,3 +1,13 @@
+/*
+ * ezShare - JavaScript Social Share Plugin
+ * Version: 1.0.0
+ * License: MIT License
+ * Author: Shakil Ahmed
+ * GitHub: https://github.com/shakilahmed0369
+ * Website: https://shakilahmeed.com
+ * 
+ * ezShare is a lightweight JavaScript plugin that enables easy sharing of content on various social media platforms.
+ */
 
 "use strict";
 

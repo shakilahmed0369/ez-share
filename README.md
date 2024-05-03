@@ -37,9 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 ```html
 <!-- You can use any HTML element like button, a, or any other tag for a shareable button -->
 <button class="ez-facebook" data-url="https://example.com/article" data-hashtags="news,technology">Share on Facebook</button>
-
 <a href="#" class="ez-linkedin" data-url="https://example.com/article">Share on LinkedIn</a>
-
 <div class="custom-button ez-pinterest" data-url="https://example.com/article" data-description="Check out this cool website!" data-media="https://example.com/image.jpg">Pin it on Pinterest</div>
 <!-- Add buttons for other platforms as needed -->
 ```
