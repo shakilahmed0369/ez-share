@@ -6,6 +6,8 @@ const facebook = document.querySelectorAll(".ez-facebook");
 const linkedin = document.querySelectorAll(".ez-linkedin");
 const pinterest = document.querySelectorAll(".ez-pinterest");
 const pocket = document.querySelectorAll(".ez-pocket");
+const reddit = document.querySelectorAll(".ez-reddit");
+const telegram = document.querySelectorAll(".ez-telegram");
 
 
 var ezShare = (function (x) {
@@ -25,6 +27,14 @@ var ezShare = (function (x) {
     },
     pocket: function(params) {
       return `https://getpocket.com/edit.php?url=${params.url}`;
+    },
+    reddit: function(params) {
+      return `https://www.reddit.com/submit?title=${params.title ?? ""}&url=${params.url}`;
+    },
+    telegram: function(params) {
+      return `https://telegram.me/share/url?url=${params.url}${
+        params.text ? `&text=${params.text}` : ""
+      }`;
     },
   }
 
@@ -82,13 +92,61 @@ var ezShare = (function (x) {
      * available params
      * url
      */
-    pinterest.forEach(item => {
+    pocket.forEach(item => {
       item.addEventListener("click", function (e) {
         e.preventDefault();
         const url = item.getAttribute("data-url") || location.href;
         const params = { url: url };
         const shareUrl = options.pocket(params);
         window.open(shareUrl, "_blank", "width  =640,height=440");
+      });
+    });
+
+    /**
+     * available params
+     * url
+     * title
+     */
+    reddit.forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = item.getAttribute("data-url") || location.href;
+        const title = item.getAttribute("data-title");
+        const params = { url: url, title: title };
+        const shareUrl = options.reddit(params);
+        window.open(shareUrl, "_blank", "width  =640,height=440");
+      });
+    });
+
+    /**
+     * available params
+     * url
+     * title
+     */
+    reddit.forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = item.getAttribute("data-url") || location.href;
+        const title = item.getAttribute("data-title");
+        const params = { url: url, title: title };
+        const shareUrl = options.reddit(params);
+        window.open(shareUrl, "_blank", "width  =640,height=440");
+      });
+    });
+    
+    /**
+     * available params
+     * url
+     * text
+     */
+    telegram.forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = item.getAttribute("data-url") || location.href;
+        const text = item.getAttribute("data-text");
+        const params = { url: url, text: text};
+        const shareUrl = options.telegram(params);
+        window.open(shareUrl, "_blank", "width=640,height=440");
       });
     });
   }
