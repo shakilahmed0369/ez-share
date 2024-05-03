@@ -10,15 +10,82 @@
     <meta property="og:image" content="https://i.pinimg.com/originals/62/f0/84/62f084621324c4f3aad1b2bd17fe4f72.jpg">
     <meta property="og:url" content="https://shakilahmeed.com">
     <meta property="og:type" content="website">
+    
+    <!-- Styling for professional look -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            width: 100%;
+            height: 80%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .image-container {
+            flex: 1;
+            background-image: url('https://i.pinimg.com/originals/62/f0/84/62f084621324c4f3aad1b2bd17fe4f72.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+        }
+
+        .buttons-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #F6D46B;
+        }
+
+        .button {
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
-    <a href="" class="ez-facebook" data-hashtags="shakil,ahmed,great">Share on Facebook</a>
-    <a href="" class="ez-linkedin">Share on LinkedIn</a>
-    <a href="" class="ez-pinterest" data-description="Check out this amazing photo!" data-media="https://picsum.photos/200/300">Pin on Pinterest</a>
-    <a href="" class="ez-pocket">Save to Pocket</a>
-    <a href="" class="ez-reddit" data-title="Interesting article you must read!">Post on Reddit</a>
-    <a href="" class="ez-telegram" data-text="Check out this awesome website!">Share on Telegram</a>
-    <a href="" class="ez-x" data-text="Exciting news!" data-via="shakilahmed" data-hashtags="awesome,news">Tweet on Twitter</a>
+    <div class="container">
+        <div class="image-container"></div>
+        <div class="buttons-container">
+            <a href="#" class="button ez-facebook" data-hashtags="awesome,news">Share on Facebook</a>
+            <a href="#" class="button ez-linkedin">Share on LinkedIn</a>
+            <a href="#" class="button ez-pinterest" data-description="Check out this amazing photo!" data-media="https://picsum.photos/200/300">Pin on Pinterest</a>
+            <a href="#" class="button ez-pocket">Save to Pocket</a>
+            <a href="#" class="button ez-reddit" data-title="Interesting article you must read!">Post on Reddit</a>
+            <a href="#" class="button ez-telegram" data-text="Check out this awesome website!">Share on Telegram</a>
+            <a href="#" class="button ez-x" data-text="Exciting news!" data-via="shakilahmed" data-hashtags="awesome,news">Tweet on Twitter</a>
+        </div>
+    </div>
     
     <!-- JavaScript file for ezShare -->
     <script src="src/ez-share.js"></script>
