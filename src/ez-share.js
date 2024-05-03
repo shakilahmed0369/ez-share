@@ -8,9 +8,10 @@ const pinterest = document.querySelectorAll(".ez-pinterest");
 const pocket = document.querySelectorAll(".ez-pocket");
 const reddit = document.querySelectorAll(".ez-reddit");
 const telegram = document.querySelectorAll(".ez-telegram");
+const x = document.querySelectorAll(".ez-x");
 
 
-var ezShare = (function (x) {
+var ezShare = (function (ez) {
 
   var options = {
     facebook: function (params) {
@@ -36,10 +37,15 @@ var ezShare = (function (x) {
         params.text ? `&text=${params.text}` : ""
       }`;
     },
+    x: function(params) {
+      return `https://twitter.com/intent/tweet?url=${params.url}&text=${
+        params.text
+      }${params.via ? `&via=${params.via}` : ""}${params.hashtags ? `&hashtags=${params.hashtags}` : ""}`;
+    },
   }
 
 
-  x.execute = function () {
+  ez.execute = function () {
     /**
      * available prams
      * url
@@ -149,9 +155,30 @@ var ezShare = (function (x) {
         window.open(shareUrl, "_blank", "width=640,height=440");
       });
     });
+
+    /**
+     * available params
+     * url
+     * title
+     * via
+     * hashtags 
+     */
+    x.forEach(item => {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        const url = item.getAttribute("data-url") || location.href;
+        const text = item.getAttribute("data-text");
+        const via = item.getAttribute("data-via");
+        const hashtags = item.getAttribute("data-hashtags");
+        const params = { url: url, text: text, via: via, hashtags: hashtags };
+        const shareUrl = options.x(params);
+        window.open(shareUrl, "_blank", "width=640,height=440");
+      });
+    });
+
   }
 
-  return x;
+  return ez;
 
 })({});
 
