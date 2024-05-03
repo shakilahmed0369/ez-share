@@ -4,10 +4,14 @@ ezShare is a lightweight JavaScript plugin that enables easy sharing of content 
 
 ## Installation
 
-To use ezShare, simply include the JavaScript file in your project:
+You can install ezShare by including the JavaScript file in your project. You have two options:
 
-```javascript
-<script src="ezShare.js"></script>
+1. **Download**: You can download the JavaScript file from the [GitHub repository](https://github.com/shakilahmed0369/ez-share) and include it in your project manually.
+
+2. **CDN**: Alternatively, you can use the ezShare script directly from the CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/shakilahmed0369/ez-share/dist/ez-share.min.js"></script>
 ```
 
 ## Usage
