@@ -1,4 +1,3 @@
-```
 # 🚀 ezShare - JavaScript Social Share Plugin
 
 ezShare is a lightweight JavaScript plugin for easy sharing of content on various social media platforms.
@@ -51,4 +50,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 - ezShare does not provide any predefined styles for the share buttons. Users have the freedom to style them according to their design preferences.
 - Ensure each button element has the appropriate class (`ez-PLATFORM`) and data attributes (`data-url`, `data-description`, etc.) for the desired platform and parameters.
-```
