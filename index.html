@@ -1,97 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ez share</title>
-    <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="Ez Share - Simplify Social Media Sharing">
-    <meta property="og:description" content="Share your favorite articles, images, and quotes with ease using ezShare. Simplify social media sharing for your audience.">
-    <meta property="og:image" content="https://i.pinimg.com/originals/62/f0/84/62f084621324c4f3aad1b2bd17fe4f72.jpg">
-    <meta property="og:url" content="https://shakilahmeed.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Styling for professional look -->
+    <title>Ez Share</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 800px;
-            width: 100%;
-            height: 80%;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .image-container {
-            flex: 1;
-            background-image: url('https://i.pinimg.com/originals/62/f0/84/62f084621324c4f3aad1b2bd17fe4f72.jpg');
+            background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnBvZXNjNTZxNXNjNzJ5YWUwdnBkb2k5NzAxNTl5eGd3bmVzYjBvZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Basrh159dGwKY/giphy.gif') no-repeat;
+            background-attachemnt: fixed;
             background-size: cover;
-            background-position: center;
-            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .glass {
+            position: relative;
+            background: inherit;
+            overflow: hidden;
+            width: 70%;
+            height: 70%;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3),
+                0 6px 20px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+        }
+
+        .glass:before {
+            content: '';
+            position: absolute;
+            background: inherit;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: -20px;
+            box-shadow: inset 0 0 500px rgba(255, 255, 255, .4);
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .info-container {
+            text-align: center;
+        }
+
+        .info-container h1 {
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .info-container p {
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 100;
+            padding-left: 100px;
+            padding-right: 100px;
+
         }
 
         .buttons-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background-color: #F6D46B;
+            text-align: center;
+            margin-top: 60px;
         }
 
-        .button {
-            margin-bottom: 10px;
-            padding: 15px 20px;
-            font-size: 16px;
+        .buttons-container a {
             text-decoration: none;
-            color: #fff;
-            background-color: #000;
-            border: none;
-            border-radius: 0;
+            padding: 20px;
+            color: white;
+            background: #000000ab;
+            display: inline-block;
+            margin: 5px;
+            border-radius: 12px;
+            font-family: system-ui;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #333;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="image-container"></div>
+    <div class="glass">
+        <div class="info-container">
+            <h1>ezShare.js</h1>
+            <p>ezShare is a lightweight JavaScript plugin that enables easy sharing of content on various social media
+                platforms.</p>
+        </div>
+
         <div class="buttons-container">
             <a href="#" class="button ez-facebook" data-hashtags="awesome,news">Share on Facebook</a>
             <a href="#" class="button ez-linkedin">Share on LinkedIn</a>
-            <a href="#" class="button ez-pinterest" data-description="Check out this amazing photo!" data-media="https://picsum.photos/200/300">Pin on Pinterest</a>
+            <a href="#" class="button ez-pinterest" data-description="Check out this amazing photo!"
+                data-media="https://picsum.photos/200/300">Pin on Pinterest</a>
             <a href="#" class="button ez-pocket">Save to Pocket</a>
             <a href="#" class="button ez-reddit" data-title="Interesting article you must read!">Post on Reddit</a>
             <a href="#" class="button ez-telegram" data-text="Check out this awesome website!">Share on Telegram</a>
-            <a href="#" class="button ez-x" data-text="Exciting news!" data-via="shakilahmed" data-hashtags="awesome,news">Tweet on Twitter</a>
+            <a href="#" class="button ez-x" data-text="Exciting news!" data-via="shakilahmed"
+                data-hashtags="awesome,news">Tweet on X</a>
         </div>
     </div>
-    
-    <!-- JavaScript file for ezShare -->
-    <script src="src/ez-share.js"></script>
+
+    <script src="/dist/ez-share.min.js"></script>
     <script>
-        // Initialize ezShare
-        ezShare.execute();
+        document.addEventListener("DOMContentLoaded", function () {
+            ezShare.execute();
+        })
     </script>
 </body>
+
 </html>
