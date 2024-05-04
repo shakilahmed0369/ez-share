@@ -9,7 +9,7 @@
     <meta property="og:description"
         content="Share your favorite articles, images, and quotes with ease using ezShare. Simplify social media sharing for your audience.">
     <meta property="og:image" content="https://i.pinimg.com/originals/62/f0/84/62f084621324c4f3aad1b2bd17fe4f72.jpg">
-    <meta property="og:url" content="https://shakilahmeed.com">
+    <meta property="og:url" content="https://github.com/shakilahmed0369/ez-share">
     <meta property="og:type" content="website">
 
     <title>Ez Share</title>
@@ -84,6 +84,46 @@
             font-family: system-ui;
             cursor: pointer;
         }
+
+        @media only screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+    .glass {
+        width: 90% !important;
+        height: 90% !important;
+    }
+    .info-container p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .buttons-container {
+        margin-top: 30px;
+    }
+    .buttons-container a {
+        padding: 15px;
+        margin: 3px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjustments for even smaller screens */
+    .info-container h1 {
+        font-size: 24px;
+    }
+    .info-container p {
+        font-size: 14px;
+    }
+    .buttons-container {
+        margin-top: 20px;
+    }
+    .buttons-container a {
+        padding: 12px;
+        margin: 2px;
+    }
+}
+
+
     </style>
 </head>
 
@@ -106,6 +146,10 @@
             <a href="#" class="button ez-x" data-text="Exciting news!" data-via="shakilahmed"
                 data-hashtags="awesome,news">Tweet on X</a>
         </div>
+        <p>
+         
+
+        </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/shakilahmed0369/ez-share/dist/ez-share.min.js"></script>
