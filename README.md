@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-## Available Platforms and Parameters
+## Available Platforms and Attributes
 
-| Platform  | Class        | Parameters   | Description                                                                                     |
+| Platform  | Class        | Attributes   | Description                                                                                     |
 |-----------|--------------|--------------|-------------------------------------------------------------------------------------------------|
 | Facebook  | `ez-facebook` | `data-url`, `data-hashtags` | Share URL to Facebook. Optionally add hashtags. If no `data-url`, current URL will be used.  |
 | LinkedIn  | `ez-linkedin` | `data-url`   | Share URL to LinkedIn. If no `data-url`, current URL will be used.                             |
